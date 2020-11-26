@@ -7,17 +7,16 @@ export const Container = styled.div`
 
 export const Inner = styled.div`
     display: flex;
-    padding: 70px 45px;
+    padding: 70px 30px;
     flex-direction: column;
-    max-width: 815px;
+    max-width: 750px;
     margin: auto;
 `;
 
 export const Item = styled.div`
     color: white;
     margin-bottom: 10px;
-    max-width: 670px;
-
+    max-width: 755px;
     &:first-of-type {
         margin-top: 3em;
     }
