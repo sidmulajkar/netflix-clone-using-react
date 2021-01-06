@@ -37,9 +37,9 @@ Accordion.Header = function AccordionHeader({ children, ...restProps }) {
             
             {children}
             {toggleShow ? (
-                <img src="../public/images/icons/close-slim.png" alt="" />
+                <img src="../images/icons/close-slim.png" alt="" />
             ) : (
-                <img src="../public/images/iconsadd.png" alt="" />
+                <img src="../images/iconsadd.png" alt="" />
             )}
         </Header>
     );
