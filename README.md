@@ -1,5 +1,7 @@
 <img src="/images/homescreen.jpg">
 
+The stack that is being used: React (custom hooks, context, portals), Firebase (Firestore/auth), Compound & Styled components!
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
