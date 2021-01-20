@@ -2,7 +2,7 @@ import styled from 'styled-components/macro';
 import { Link as ReactRouterLink } from 'react-router-dom';
 
 export const Container = styled.div`
-    dsiplay: flex;
+    display: flex;
     flex-direction: column;
     min-height: 660px;
     background-color: rgba(0,0,0,0.80);
@@ -46,7 +46,7 @@ export const Text = styled.p`
 
 export const TextSmall = styled.p`
     margin-top: 10px;
-    font-sixe: 13px;
+    font-size: 13px;
     line-height: normal;
     color: #8c8c8c;
 `;
@@ -81,12 +81,12 @@ export const Submit = styled.button`
     font-size: 16px;
     font-weight: bold;
     margin: 24px 0 13px;
-    padding; 16px;
+    padding: 16px;
     border: 0;
     color: white;
     cursor: pointer;
 
-    &:disabled {
+    &: disabled {
         opacity: 0.5;
     }
 `;
