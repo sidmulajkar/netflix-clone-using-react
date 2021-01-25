@@ -27,7 +27,7 @@ export const Header = styled.div`
     justify-content: space-between;
     cursor: pointer;
     margin-bottom: 1px;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: normal;
     background: #303030;
     padding: 0.8em 1.2em;
@@ -44,14 +44,14 @@ export const Header = styled.div`
     }
 
     @media (max-width: 600px) {
-        font-size: 16px;
+        font-size: 19px;
     }
 `;
 
 export const Body = styled.div`
     max-height: 1200px;
     transition: max-height 0.25s cubic-beizer(0.5, 0, 0.1, 1);
-    font-size: 18px;
+    font-size: 22px;
     font-weight: normal;
     line-height: normal;
     background: #303030;
@@ -60,7 +60,7 @@ export const Body = styled.div`
     user-select: none;
 
     @media (max-width: 600px) {
-        font-size: 16px;
+        font-size: 18px;
         line-height: 22px;
     }
 `;
