@@ -3,6 +3,8 @@ import  React, { useContext, useState, useEffect } from 'react';
 import { FirebaseContext } from '../context/firebase';
 import { SelectProfileContainer } from './profiles';
 import { Header, Loading } from '../components';
+import * as ROUTES from '../constants/routes';
+import logo from '../logo.svg';
 
 export function BrowseContainer({ slides }) {
     const [profile, setProfile] = useState({});
@@ -20,10 +22,28 @@ export function BrowseContainer({ slides }) {
 
     return profile.displayName ? (
         <>
-        {loading ? <Loading src={user.photoURL} /> 
-            :  <Loading.ReleaseBody />}
+            {loading ? <Loading src={user.photoURL} /> 
+                :  <Loading.ReleaseBody />}
 
-        <Header src="joker1">
+            <Header src="joker1" dontShowOnSmallViewPort>
+            <Header.Frame>
+                <Header.Group>
+                    <Header.Logo to={ROUTES.HOME} src={logo} alt="Netflix" />
+                    <Header.TextLink>Series</Header.TextLink>
+                    <Header.TextLink>Films</Header.TextLink>
+                </Header.Group>
+                <Header.Group>
+                    <Header.Profile>
+                        <Header.Picture src={user.photoURL} />
+                        <Header.Dropdown>
+                            <Header.Group>
+                                <Header.Picture src={user.photoURL} />
+                                <Header.TextLink>{user.displayName}</Header.TextLink>
+                            </Header.Group>
+                        </Header.Dropdown>
+                    </Header.Profile>
+                </Header.Group>
+            </Header.Frame>
             <Header.Feature>
                 <Header.FeatureCallOut>Watch Joker Now</Header.FeatureCallOut>
                 <Header.Text>
@@ -32,11 +52,11 @@ export function BrowseContainer({ slides }) {
                 futile attempt to feel like he's part of the world around him.
                 </Header.Text>
             </Header.Feature>
-        </Header>
+            </Header>
         </>
     ) : (
         <SelectProfileContainer user={user} setProfile={setProfile} />
     );
 }
 
-//Timestamp 5:51:51 need to work on header image and text alignment
+//Header Image issue resolved, new timestamp 6:06:55
