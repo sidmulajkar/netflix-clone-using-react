@@ -109,4 +109,4 @@ export function BrowseContainer({ slides }) {
     );
 }
 
-//new timestamp 7:30:18, need to work on cards 
+//new timestamp 7:31:02, need to work on Playeer component and live search using the fuse.js
