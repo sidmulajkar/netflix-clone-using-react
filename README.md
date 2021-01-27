@@ -1,3 +1,5 @@
+<img src="/images/demo.png">
+
 <img src="/images/homescreen.jpg">
 
 The stack that is being used: React (custom hooks, context, portals), Firebase (Firestore/auth), Compound & Styled components!
