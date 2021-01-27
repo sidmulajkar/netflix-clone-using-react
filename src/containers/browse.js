@@ -2,10 +2,11 @@
 import  React, { useContext, useState, useEffect } from 'react';
 import { FirebaseContext } from '../context/firebase';
 import { SelectProfileContainer } from './profiles';
-import { Header, Loading } from '../components';
+import { Card, Header, Loading } from '../components';
 import * as ROUTES from '../constants/routes';
 import logo from '../logo.svg';
-import Card from '../components/card';
+import { FooterContainer } from './footer';
+
 
 export function BrowseContainer({ slides }) {
 
@@ -96,15 +97,16 @@ export function BrowseContainer({ slides }) {
                         </Card.Entities>
 
                         <Card.Feature category={category}>
-                            <p>Hello</p>
+                            
                         </Card.Feature>
                     </Card>
                 ))}
             </Card.Group>
+            <FooterContainer />
         </>
     ) : (
         <SelectProfileContainer user={user} setProfile={setProfile} />
     );
 }
 
-//new timestamp 6:34:05, need to work on cards
+//new timestamp 7:30:18, need to work on cards 
