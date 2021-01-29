@@ -1,11 +1,13 @@
 /* eslint-disable no-nested-ternary */
 import  React, { useContext, useState, useEffect } from 'react';
+import Fuse from 'fuse.js';
 import { FirebaseContext } from '../context/firebase';
 import { SelectProfileContainer } from './profiles';
 import { Card, Header, Loading } from '../components';
 import * as ROUTES from '../constants/routes';
 import logo from '../logo.svg';
 import { FooterContainer } from './footer';
+import Player from '../components/player';
 
 
 export function BrowseContainer({ slides }) {
@@ -30,7 +32,19 @@ export function BrowseContainer({ slides }) {
         setSlideRows(slides[category]);
     }, [slides, category]);
 
+    useEffect(() => {
+        const fuse = new Fuse(slideRows, 
+            { keys: ['data.description', 'data,title', 'data.genre'], });
+        const results = fuse.search(searchTerm).map(({ item }) => item);
 
+        if(slideRows.length > 0 && searchTerm.length > 3 
+            && results.length > 0 ) {
+            setSlideRows(results);
+        } else {
+            setSlideRows(slides[category]);
+        }
+
+    }, [searchTerm]);
 
     return profile.displayName ? (
         <>
@@ -97,7 +111,10 @@ export function BrowseContainer({ slides }) {
                         </Card.Entities>
 
                         <Card.Feature category={category}>
-                            
+                            <Player>
+                                <Player.Button />
+                                <Player.Video src="/videos/bunny.mp4" />
+                            </Player>
                         </Card.Feature>
                     </Card>
                 ))}
@@ -109,4 +126,4 @@ export function BrowseContainer({ slides }) {
     );
 }
 
-//new timestamp 7:31:02, need to work on Playeer component and live search using the fuse.js
+//new timestamp 7:53:08, need to work on Player test and overall performance
