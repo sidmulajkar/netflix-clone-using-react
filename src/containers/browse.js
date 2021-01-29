@@ -43,7 +43,6 @@ export function BrowseContainer({ slides }) {
         } else {
             setSlideRows(slides[category]);
         }
-
     }, [searchTerm]);
 
     return profile.displayName ? (
