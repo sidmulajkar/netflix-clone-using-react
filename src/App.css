@@ -1,4 +1,13 @@
-.App {
+* {
+  margin: 0;
+}
+
+.app {
+  background-color: #111;
+}
+/* original app.css disabled */
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +44,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

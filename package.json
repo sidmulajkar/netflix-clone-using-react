@@ -1,5 +1,4 @@
 {
-  "homepage": "https://sidmulajkar.github.io/netflix-clone-using-react/",
   "name": "netflix",
   "version": "0.1.0",
   "private": true,
@@ -7,20 +6,21 @@
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.1.2",
     "@testing-library/user-event": "^12.2.2",
+    "axios": "^0.21.1",
     "eslint": "^7.13.0",
     "firebase": "^8.0.2",
     "fuse.js": "^6.4.3",
+    "movie-trailer": "^2.0.7",
     "normalize.css": "^8.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
+    "react-youtube": "^7.13.1",
     "styled-components": "^5.2.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -43,8 +43,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^3.1.0"
   }
 }

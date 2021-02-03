@@ -8,6 +8,7 @@ import * as ROUTES from '../constants/routes';
 import logo from '../logo.svg';
 import { FooterContainer } from './footer';
 import Player from '../components/player';
+import HeaderOne from '../components/headerone';
 
 
 export function BrowseContainer({ slides }) {
@@ -26,7 +27,7 @@ export function BrowseContainer({ slides }) {
             setLoading(false);
         }, 3000);
     }, [profile.displayName]);
-
+    
 
     useEffect(() => {
         setSlideRows(slides[category]);
@@ -43,14 +44,46 @@ export function BrowseContainer({ slides }) {
         } else {
             setSlideRows(slides[category]);
         }
+
     }, [searchTerm]);
 
     return profile.displayName ? (
         <>
             {loading ? <Loading src={user.photoURL} /> 
                 :  <Loading.ReleaseBody />}
+            
+            
+                <Header>
+                <Header.Frame>
+                <Header.Group>
+                    <Header.Logo to={ROUTES.HOME} src={logo} alt="Netflix" />
+                        
+                </Header.Group>
 
-            <Header src="joker1" dontShowOnSmallViewPort>
+                <Header.Group>
+                    <Header.Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+                    <Header.Profile>
+                        <Header.Picture src={user.photoURL} />
+                        <Header.Dropdown>
+                            <Header.Group>
+                                <Header.Picture src={user.photoURL} />
+                                <Header.TextLink>{user.displayName}</Header.TextLink>
+                            </Header.Group>
+
+                            <Header.Group>
+                                <Header.TextLink onClick={() => firebase.auth().signOut()}>Sign out</Header.TextLink>
+                            </Header.Group>
+                        </Header.Dropdown>
+                    </Header.Profile>
+                </Header.Group>
+            </Header.Frame>
+            <Header.Banner></Header.Banner>
+            </Header>
+        
+
+
+            
+            {/* <Header src="joker1" dontShowOnSmallViewPort>
             <Header.Frame>
                 <Header.Group>
                     <Header.Logo to={ROUTES.HOME} src={logo} alt="Netflix" />
@@ -90,9 +123,9 @@ export function BrowseContainer({ slides }) {
 
                 <Header.PlayButton>Play</Header.PlayButton>
             </Header.Feature>
-            </Header>
+            </Header> */}
 
-            <Card.Group>
+            {/* <Card.Group>
                 {slideRows.map((slideItem) => (
                     <Card key={`${category}-${slideItem.title.toLowerCase()}`}>
                         <Card.Title>{slideItem.title}</Card.Title>
@@ -117,8 +150,8 @@ export function BrowseContainer({ slides }) {
                         </Card.Feature>
                     </Card>
                 ))}
-            </Card.Group>
-            <FooterContainer />
+            </Card.Group> */}
+            {/* <FooterContainer /> */}
         </>
     ) : (
         <SelectProfileContainer user={user} setProfile={setProfile} />

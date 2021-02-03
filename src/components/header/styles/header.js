@@ -21,10 +21,15 @@ export const Group = styled.div`
 export const Container = styled.div`
     display: flex;
     margin: 0 56px;
-    height: 64px;
+    height: 30px;
+    width: 90%;
     padding: 18px 0;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    z-index: 1;
+    transition-timing-function: ease-in;
+    transition: all 0.4s;
 
     a {
         display: flex;
@@ -101,7 +106,7 @@ export const Search = styled.div`
     align-items: center;
 
     svg {
-        color: white;
+        color: #111;
         cursor: pointer;
     }
 
@@ -114,6 +119,7 @@ export const SearchIcon = styled.button`
     cursor: pointer;
     background-color: transparent;
     border: 0;
+    padding-top: 20px;
 
     img {
         filter: brightness(0) invert(1);
@@ -159,6 +165,7 @@ export const Profile = styled.div`
     align-items: center;
     margin-left: 20px;
     position: relative;
+    paddding-top: 20px;
 
     button {
         cursor: pointer;
@@ -174,6 +181,7 @@ export const Logo = styled.img`
     height: 32px;
     width: 108px;
     margin-right: 40px;
+    padding-top: 20px;
 
     @media (min-width: 1449px) {
         height: 45px;

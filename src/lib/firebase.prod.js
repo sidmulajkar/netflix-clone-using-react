@@ -1,6 +1,7 @@
 import Firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
+import { seedDatabase } from '../seed';
 
 //we need to somehow seed the database
 

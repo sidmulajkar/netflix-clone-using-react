@@ -3,10 +3,11 @@ import styled from 'styled-components/macro';
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    justify-cintent: center;
+    justify-content: center;
     align-items: center;
     margin: auto;
     max-width: 80%;
+    padding-top: 80px;
 
 `;
 
