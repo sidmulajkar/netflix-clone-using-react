@@ -8,7 +8,7 @@ import * as ROUTES from '../constants/routes';
 import logo from '../logo.svg';
 import { FooterContainer } from './footer';
 import Player from '../components/player';
-
+import HeaderOne from '../components/headerone';
 
 
 export function BrowseContainer({ slides }) {
