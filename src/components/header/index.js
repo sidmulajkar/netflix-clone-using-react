@@ -6,7 +6,7 @@ import Row from '../row';
 import requests from '../../request';
 import { Background, ButtonLink, Container, PlayButton, Search, SearchIcon, SearchInput, Logo, Dropdown, Profile, Picture, Group, Feature, Text, FeatureCallOut, Link } from './styles/header';
 
-export default function Header({ bg = false, children, ...restProps }) {
+export default function Header({ bg = true, children, ...restProps }) {
     return bg ? <Background { ...restProps}>{children}</Background> : children;
 } 
 

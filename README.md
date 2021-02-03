@@ -1,6 +1,6 @@
-<img src="/images/demo.png">
+<img src="/images/demo1.png">
 
-<img src="/images/homescreen.jpg">
+<img src="/images/demo2.png">
 
 The stack that is being used: React (custom hooks, context, portals), Firebase (Firestore/auth), Compound & Styled components!
 
