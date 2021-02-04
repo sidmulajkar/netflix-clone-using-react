@@ -1,0 +1,61 @@
+[debug] [2021-02-03T19:07:15.047Z] ----------------------------------------------------------------------
+[debug] [2021-02-03T19:07:15.049Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Siddhant Mulajkar\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-02-03T19:07:15.049Z] CLI Version:   9.3.0
+[debug] [2021-02-03T19:07:15.049Z] Platform:      win32
+[debug] [2021-02-03T19:07:15.049Z] Node Version:  v14.15.0
+[debug] [2021-02-03T19:07:15.050Z] Time:          Thu Feb 04 2021 00:37:15 GMT+0530 (India Standard Time)
+[debug] [2021-02-03T19:07:15.050Z] ----------------------------------------------------------------------
+[debug] [2021-02-03T19:07:15.051Z] 
+[debug] [2021-02-03T19:07:15.054Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-02-03T19:07:15.055Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\React_App\netflix\netflix-clone-using-react
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2021-02-03T19:07:31.007Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2021-02-03T19:07:31.695Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2021-02-03T19:07:31.695Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project netflix-react-9480e (netflix-react) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[info] +  Wrote build/404.html 
+[debug] [2021-02-03T19:09:13.682Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2021-02-03T19:09:13.756Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2021-02-03T19:09:13.756Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"8.2.5","browserURL":"https://www.gstatic.com/firebasejs/8.2.5/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/8.2.5/firebase.tgz"},"live":{"version":"8.2","browserURL":"https://www.gstatic.com/firebasejs/live/8.2/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/8.2/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/8.2.5/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js","auth":"https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js","database":"https://www.gstatic.com/firebasejs/8.2.5/firebase-database.js","firestore":"https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js","functions":"https://www.gstatic.com/firebasejs/8.2.5/firebase-functions.js","installations":"https://www.gstatic.com/firebasejs/8.2.5/firebase-installations.js","messaging":"https://www.gstatic.com/firebasejs/8.2.5/firebase-messaging.js","storage":"https://www.gstatic.com/firebasejs/8.2.5/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/8.2.5/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/8.2.5/firebase-remote-config.js","firestore.memory":"https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.memory.js"}}
+[info] +  Wrote build/index.html 
+[info] 
+[info] i  Detected a .git folder at D:\React_App\netflix\netflix-clone-using-react 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=279876550&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-02-03T19:09:36.001Z] >>> HTTP REQUEST POST https://github.com/login/oauth/access_token  
+ {"client_id":"89cf50f02ac6aaed3484","client_secret":"3330d14abc895d9a74d5f17cd7a00711fa2c5bf0","code":"4d5746bffad3eaa6a6ac","redirect_uri":"http://localhost:9005","state":"279876550"}
+[debug] [2021-02-03T19:09:36.306Z] <<< HTTP RESPONSE 200 {"date":"Wed, 03 Feb 2021 19:09:40 GMT","content-type":"application/json; charset=utf-8","transfer-encoding":"chunked","server":"GitHub.com","status":"200 OK","vary":"X-PJAX, Accept-Encoding, Accept, X-Requested-With, Accept-Encoding","etag":"W/\"776e88975e2ce24eb9e2197b4a55f045\"","cache-control":"max-age=0, private, must-revalidate","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-frame-options":"deny","x-content-type-options":"nosniff","x-xss-protection":"1; mode=block","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","expect-ct":"max-age=2592000, report-uri=\"https://api.github.com/_private/browser/errors\"","content-security-policy":"default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker-5029ae85.js gist.github.com/socket-worker-5029ae85.js","x-github-request-id":"6265:50F2:3707A6:3CB12D:601AF4F4"}
+[debug] [2021-02-03T19:09:36.306Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2021-02-03T19:09:36.672Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2021-02-03T19:09:36.672Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"sidmulajkar","id":74139127,"node_id":"MDQ6VXNlcjc0MTM5MTI3","avatar_url":"https://avatars.githubusercontent.com/u/74139127?v=4","gravatar_id":"","url":"https://api.github.com/users/sidmulajkar","html_url":"https://github.com/sidmulajkar","followers_url":"https://api.github.com/users/sidmulajkar/followers","following_url":"https://api.github.com/users/sidmulajkar/following{/other_user}","gists_url":"https://api.github.com/users/sidmulajkar/gists{/gist_id}","starred_url":"https://api.github.com/users/sidmulajkar/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/sidmulajkar/subscriptions","organizations_url":"https://api.github.com/users/sidmulajkar/orgs","repos_url":"https://api.github.com/users/sidmulajkar/repos","events_url":"https://api.github.com/users/sidmulajkar/events{/privacy}","received_events_url":"https://api.github.com/users/sidmulajkar/received_events","type":"User","site_admin":false,"name":"Siddhant Mulajkar","company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":" A geeky nerd with some programming knowledge.","twitter_username":null,"public_repos":3,"public_gists":0,"followers":0,"following":0,"created_at":"2020-11-08T12:12:21Z","updated_at":"2021-02-03T19:02:57Z","private_gists":0,"total_private_repos":0,"owned_private_repos":0,"disk_usage":73927,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as sidmulajkar 
+[info] 

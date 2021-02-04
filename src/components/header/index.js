@@ -6,7 +6,7 @@ import Row from '../row';
 import requests from '../../request';
 import { Background, ButtonLink, Container, PlayButton, Search, SearchIcon, SearchInput, Logo, Dropdown, Profile, Picture, Group, Feature, Text, FeatureCallOut, Link } from './styles/header';
 
-export default function Header({ bg = false, children, ...restProps }) {
+export default function Header({ bg = true, children, ...restProps }) {
     return bg ? <Background { ...restProps}>{children}</Background> : children;
 } 
 
@@ -90,8 +90,6 @@ Header.Banner = function HeaderBanner({ children, ...restProps }) {
     );
 }
 
-
-/* new timestamp 2:39:00 */
 
 Header.FeatureCallOut = function HeaderFeatureCallOut({ children, ...restProps }) {
     return <FeatureCallOut {...restProps}>{children}</FeatureCallOut>;

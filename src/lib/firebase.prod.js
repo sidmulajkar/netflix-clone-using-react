@@ -5,7 +5,7 @@ import { seedDatabase } from '../seed';
 
 //we need to somehow seed the database
 
-//we need a config here
+//we need a config here, put your api details here 
 const config = {
     apiKey: "AIzaSyD6rfFIRNC4j0YoRtZGi6vLlJ0M2baoffE",
     authDomain: "netflix-react-9480e.firebaseapp.com",
